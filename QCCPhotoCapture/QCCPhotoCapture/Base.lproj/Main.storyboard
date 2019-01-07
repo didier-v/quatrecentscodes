@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QCCPhotoCapture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cB1-61-rna" userLabel="Live View">
+                                <rect key="frame" x="16" y="25" width="343" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="7AM-q0-uFp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjV-rx-IBU">
+                                <rect key="frame" x="160" y="309" width="55" height="49"/>
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LLl-xP-76R"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SmE-Ka-NaU">
+                                <rect key="frame" x="16" y="359" width="343" height="288"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="leading" secondItem="SmE-Ka-NaU" secondAttribute="leading" id="5b8-QO-M9h"/>
+                            <constraint firstItem="SmE-Ka-NaU" firstAttribute="top" secondItem="HjV-rx-IBU" secondAttribute="bottom" constant="1" id="5yt-2G-NMY"/>
+                            <constraint firstItem="HjV-rx-IBU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cdb-Yz-se0"/>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="KHh-bN-5zW"/>
+                            <constraint firstItem="HjV-rx-IBU" firstAttribute="top" secondItem="cB1-61-rna" secondAttribute="bottom" constant="4" id="NZP-3i-Xjz"/>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="trailing" secondItem="SmE-Ka-NaU" secondAttribute="trailing" id="OgF-7W-Blx"/>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="centerX" secondItem="HjV-rx-IBU" secondAttribute="centerX" id="Ud6-MU-y6G"/>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dS9-GG-t97"/>
+                            <constraint firstItem="cB1-61-rna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ljl-3o-GTn"/>
+                            <constraint firstItem="HjV-rx-IBU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ry1-Zi-Bmh"/>
+                            <constraint firstAttribute="bottom" secondItem="SmE-Ka-NaU" secondAttribute="bottom" constant="20" symbolic="YES" id="wiw-YJ-Xbs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="captureView" destination="SmE-Ka-NaU" id="urP-Lb-9dc"/>
+                        <outlet property="liveView" destination="cB1-61-rna" id="zT8-oV-UpF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>

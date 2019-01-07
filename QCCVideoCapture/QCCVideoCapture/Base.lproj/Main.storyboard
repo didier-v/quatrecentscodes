@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QCCVideoCapture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aya-5Z-DAB" userLabel="Live View">
+                                <rect key="frame" x="16" y="20" width="343" height="285"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOd-Sz-jNK">
+                                <rect key="frame" x="16" y="344" width="343" height="303"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zH-nA-CAT">
+                                <rect key="frame" x="160" y="305" width="55" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="sZT-zd-29L"/>
+                                </constraints>
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQS-9l-51b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1zH-nA-CAT" firstAttribute="top" secondItem="Aya-5Z-DAB" secondAttribute="bottom" id="29i-6L-plB"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="centerX" secondItem="1zH-nA-CAT" secondAttribute="centerX" id="2Tp-Ct-AYm"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="leading" secondItem="IOd-Sz-jNK" secondAttribute="leading" id="4v7-9v-lQ6"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Gm-jQ-M3z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1zH-nA-CAT" secondAttribute="bottom" constant="331" id="HII-EP-pwU"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="OCR-bi-rvh"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="trailing" secondItem="IOd-Sz-jNK" secondAttribute="trailing" id="WMf-QH-XNn"/>
+                            <constraint firstItem="IOd-Sz-jNK" firstAttribute="top" secondItem="Aya-5Z-DAB" secondAttribute="bottom" constant="39" id="e1Y-NB-lZ2"/>
+                            <constraint firstItem="Aya-5Z-DAB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qmz-Ph-RYz"/>
+                            <constraint firstAttribute="bottom" secondItem="IOd-Sz-jNK" secondAttribute="bottom" constant="20" symbolic="YES" id="zDR-0S-Roe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="captureView" destination="IOd-Sz-jNK" id="YrI-Lf-vuG"/>
+                        <outlet property="liveView" destination="Aya-5Z-DAB" id="GjC-KK-HRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
